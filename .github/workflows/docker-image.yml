@@ -19,10 +19,12 @@ jobs:
       uses:  actions/setup-java@v5
       with:
         distribution: 'temurin' # See 'Supported distributions' for available options
-        java-version: '21-jre'
+        java-version: '25'
     
     - name: Build Jar
-      run: ./mvnw clean package -DskipTest
+      run: |
+        chmod +x ./mvnw
+       ./mvnw clean package -DskipTest
 
     - name: Login to Docker Hub
       uses: docker/login-action@v4
