@@ -1,0 +1,8 @@
+#spring.application.name=CI_CD
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: CI_CD
