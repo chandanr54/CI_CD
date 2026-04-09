@@ -24,7 +24,7 @@ jobs:
     - name: Build Jar
       run: |
         chmod +x ./mvnw
-       ./mvnw clean package -DskipTest
+        ./mvnw clean package -DskipTest
 
     - name: Login to Docker Hub
       uses: docker/login-action@v4
